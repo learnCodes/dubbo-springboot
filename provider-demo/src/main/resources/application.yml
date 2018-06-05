@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: dubbo-springcloud-provider
+  dubbo:
+    server: true
