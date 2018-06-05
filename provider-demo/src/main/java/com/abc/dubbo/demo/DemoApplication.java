@@ -1,5 +1,7 @@
 package com.abc.dubbo.demo;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
