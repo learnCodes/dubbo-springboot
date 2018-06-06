@@ -3,11 +3,13 @@ spring:
     name: dubbo-springboot-provider
   dubbo:
     application:
+      id: duboo-provider-app-1
       name: dubbo-provider-1
     protocol:
       name: dubbo
       port: 20800 
     server: true
     registry: zookeeper://localhost:2181
+    base-package: com.abc.dubbo.demo.controller     
 server:
   port: 9090
