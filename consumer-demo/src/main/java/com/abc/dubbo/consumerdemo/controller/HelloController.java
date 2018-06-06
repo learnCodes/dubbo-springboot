@@ -4,13 +4,11 @@ package com.abc.dubbo.consumerdemo.controller;
 import com.abc.dubbo.demo.facade.service.HelloWorldService;
 import com.alibaba.dubbo.config.annotation.Reference;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Component
 public class HelloController{
     @Reference
     private HelloWorldService service;
