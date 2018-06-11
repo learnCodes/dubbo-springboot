@@ -1,0 +1,10 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: dubbo-springboot-consumer
+  dubbo:
+    application:
+      name: dubbo-springboot-consumer
+    registry:
+      address: zookeeper://10.230.171.89:2181

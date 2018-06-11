@@ -1,0 +1,13 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: dubbo-springboot-provider
+  dubbo:
+    application:
+      name: dubbo-springboot-provider
+    registry:
+      address: zookeeper://10.230.171.89:2181
+    protocol:
+      name: dubbo
+      port: 20800
