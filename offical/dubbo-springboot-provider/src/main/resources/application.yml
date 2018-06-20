@@ -11,3 +11,6 @@ spring:
     protocol:
       name: dubbo
       port: 20800
+app:
+  config:
+    delay: 20
