@@ -12,13 +12,15 @@
     <dubbo:registry address="${spring.dubbo.registry.address}"/>
 
     <!-- use dubbo protocol to export service on port 20880 -->
-    <dubbo:protocol name="${spring.dubbo.protocol.name}" port="${spring.dubbo.protocol.port}"/>
-
+    <dubbo:protocol name="dubbo" port="${spring.dubbo.protocol.dubbo.port}"/>
+    <dubbo:protocol name="rest" port="${spring.dubbo.protocol.rest.port}" server="tomcat" />
     <!-- service implementation, as same as regular local bean -->
     <bean id="demoService" class="com.alibaba.demo.providerboot.service.DemoServiceImpl"/>
+    <bean id="restService" class="com.alibaba.demo.providerboot.service.RestServiceImpl"/>
 
     <!-- declare the service interface to be exported -->
-    <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService"/>
+    <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" protocol="dubbo"/>
+    <dubbo:service interface="com.alibaba.dubbo.demo.RestService" ref="restService" protocol="rest"/>
     
     <dubbo:monitor protocol="registry"/> 
 </beans>
